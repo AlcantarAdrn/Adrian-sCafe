@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="PaddysCafe.xsl"?>
-<cafemenu>
+<?xml-stylesheet type="text/xsl" href="AdriansRecords.xsl"?>
+<recordsMenu>
 
     <section name= "Side Dishes">
         <entree vegetarian="true">
@@ -77,4 +77,4 @@
 
     </section>
 
-</cafemenu>
+</recordsMenu>
