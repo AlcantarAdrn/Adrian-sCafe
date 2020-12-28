@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<recordsMenu>
+<RecordsMenu>
 <section name = "Pop">
 <record available="true">
 <title> Ariana Grande</title>
 <price>18.95</price>
+</record>
+<record available = "true" >
+<title> Jessie Ware</title>
+<price>15.49</price>
+</record>
 </section>
 <section name = "Electro">
+
 </section>
-</recordsMenu> 
+</RecordsMenu> 
