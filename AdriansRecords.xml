@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RecordsMenu>
-<section name = "Pop">
-<record available="true">
-<title> Ariana Grande</title>
-<price>18.95</price>
-</record>
-<record available = "true" >
-<title> Jessie Ware</title>
-<price>15.49</price>
-</record>
-</section>
-<section name = "Electro">
+
+    <section name = "Pop">
+
+        <record available="true">
+            <artist> Ariana Grande</artist>
+            <title>  Sweetener </title> 
+            <price>18.95</price>
+        </record>
+
+        <record available = "true" >
+            <artist> Jessie Ware</artist>
+            <title> What's your plessure </title> 
+            <price>15.49</price>
+        </record>
+
+        <record available = "true">
+            <artist> </artist>  
+
+
+        </record>
+
+    </section>
+
+    <section name = "Electro-pop">
+
+        <record available = "true">
+        <title> </title>    
+        </record>
 
 </section>
 </RecordsMenu> 
