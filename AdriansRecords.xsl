@@ -14,8 +14,31 @@
             </thead>
             <tbody>
                 <xsl:for-each select = "/recordsmenu/section">
-                
+                <tr> 
+                    <th colspan = "3">
+                        <xsl:value-of select = "@name"/>
+                    </th>
+                </tr>
 
-
-            </tbody>
+                <xsl:for-each select="record">
+                    <tr id = "{position()}">
+                        <xsl:attribute name="available"> 
+                            <xsl:value-of select="boolean(@available)"/>
+                </xsl:attribute>
+                <td align = "center">
+                    <input name = "item0" type =  "checkbox"/>
+                    </td>
+                <td>
+                    <xsl:value-of select = "item"/>
+                </td>
+                <td align = "right">
+                    <xsl:value-of select = "price"/>  
+                </td>
+            </tr>
+            </xsl:for-each>
+            </xsl:for-each>
+        </tbody>
+    </table>
+    </xsl:template>
+    </xsl:stylesheet>
                 
