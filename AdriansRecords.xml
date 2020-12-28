@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RecordsMenu>
-
+<recordsmenu>
     <section name = "Pop">
 
         <record available="true">
@@ -23,11 +22,27 @@
 
     </section>
 
-    <section name = "Electro-pop">
-
+    <section name = "Folk-pop">
         <record available = "true">
-        <title> </title>    
+        <artist>Maggie Rogers</artist>    
+        <title>Notes from the Archives</title>
+        <price>14.99</price> 
         </record>
+    </section>
+    
+    <section name = "Alternative">      
+        <record available = "true">
+        <artist> FKA Twigs </artist>
+        <title> Magdalene</title>
+        <price>  19.89 </price> 
+        </record>  
+    
+    
+        <record available = "true">
+        <artist> Sevdaliza </artist>
+        <title>Shabrang</title> 
+        <price>  17.89 </price>  
+        </record>   
+        </section>
 
-</section>
-</RecordsMenu> 
+    </recordsmenu> 
