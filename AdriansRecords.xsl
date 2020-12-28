@@ -14,7 +14,17 @@
             </thead>
             <tbody>
                 <xsl:for-each select = "/recordsmenu/section">
-                
+                <tr> 
+                    <th colspan = "3">
+                        <xsl:value-of select = "@name"/>
+                    </th>
+                </tr>
+
+                <xsl:for-each select="record">
+                    <tr>
+                        <xsl:attribute name="available"> 
+
+                </xsl:attribute>
 
 
             </tbody>
