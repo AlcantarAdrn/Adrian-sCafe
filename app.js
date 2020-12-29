@@ -3,13 +3,15 @@ var http = require('http'),
     express = require('express'),
     fs = require ('fs'),
     xmlParse = require('xslt-processor').xmlParse,
-    xsltProcess = require('xslt-processor').xsltProcess;
+    xsltProcess = require('xslt-processor').xsltProcess,
+    xml2js = require('xml2js');
 
 var router = express();
 var server = http.createServer(router);
 
 router.use(express.static(path.resolve(__dirname, 'views')));
 router.use(express.urlencoded({extended:true}));
+router.use(express.json());
 
 
 router.get('/get/html', function(req,res) {
