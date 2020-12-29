@@ -1,48 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <recordsmenu>
-    <section name = "Pop">
-
-        <record available="true">
+    <section name="Pop">
+        <entree>
             <artist> Ariana Grande</artist>
-            <title>  Sweetener </title> 
+            <title>  Sweetener </title>
             <price>18.95</price>
-        </record>
-
-        <record available = "true" >
+        </entree>
+        <entree>
             <artist> Jessie Ware</artist>
-            <title> What's your plessure </title> 
+            <title> What's your plessure? </title>
             <price>15.49</price>
-        </record>
-
-        <record available = "true">
-            <artist> </artist>  
-
-
-        </record>
-
+        </entree>
     </section>
 
-    <section name = "Folk-pop">
-        <record available = "true">
-        <artist>Maggie Rogers</artist>    
-        <title>Notes from the Archives</title>
-        <price>14.99</price> 
-        </record>
+    <section name="Folk-pop">
+        <entree>
+            <artist>Maggie Rogers</artist>
+            <title>Notes from the Archives</title>
+            <price>14.99</price>
+        </entree>
+        <entree>
+            <artist>Billie Marten</artist>
+            <title>Feeding Seahorses by Hand</title>
+            <price>13.49</price>
+        </entree>
     </section>
-    
-    <section name = "Alternative">      
-        <record available = "true">
-        <artist> FKA Twigs </artist>
-        <title> Magdalene</title>
-        <price>  19.89 </price> 
-        </record>  
-    
-    
-        <record available = "true">
+
+    <section name="Alternative">
+        <entree>
+            <artist> FKA Twigs </artist>
+            <title> Magdalene</title>
+            <price>  19.89 </price>
+        </entree>
+        <entree>
         <artist> Sevdaliza </artist>
-        <title>Shabrang</title> 
-        <price>  17.89 </price>  
-        </record>   
-        </section>
-
-    </recordsmenu> 
+            <title>Shabrang</title>
+            <price>  17.89 </price>
+        </entree>
+         <entree>
+        <artist> Grimes </artist>
+            <title>Visions</title>
+            <price>12.04 </price>
+        </entree>
+    </section>
+</recordsmenu>

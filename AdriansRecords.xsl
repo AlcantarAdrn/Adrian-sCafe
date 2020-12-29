@@ -4,32 +4,35 @@
         <table id="recordsTable" border="1" class="indent">
         <thead>
             <tr>
-                <th colspan="3">Your Records</th>
+                <th colspan="6">Records</th>
             </tr>
+            
             <tr>
-                <th>Select </th>
+                <th>Select</th>
+                <th>Artist</th>
                 <th>Title</th>
                 <th> Price </th>
             </tr>
-            </thead>
+            
+        </thead>
             <tbody>
                 <xsl:for-each select = "/recordsmenu/section">
                 <tr> 
-                    <th colspan = "3">
+                    <th colspan = "4">
                         <xsl:value-of select = "@name"/>
                     </th>
                 </tr>
 
-                <xsl:for-each select="record">
+                <xsl:for-each select="entree">
                     <tr id = "{position()}">
-                        <xsl:attribute name="available"> 
-                            <xsl:value-of select="boolean(@available)"/>
-                </xsl:attribute>
-                <td align = "center">
+                 <td align = "center">
                     <input name = "item0" type =  "checkbox"/>
                     </td>
                 <td>
-                    <xsl:value-of select = "item"/>
+                    <xsl:value-of select = "artist"/>
+                </td>
+                <td>
+                    <xsl:value-of select = "title"/>
                 </td>
                 <td align = "right">
                     <xsl:value-of select = "price"/>  
