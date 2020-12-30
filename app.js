@@ -51,6 +51,23 @@ router.get('/get/html', function(req,res) {
     res.end(result.toString());
 });
 
+router.post('/post/json', function (req,res){
+
+    function appendJSON(obj)
+
+    xmlFileToJs('AdriansRecords.xml', function (err, result) {
+        if(err) throw (err);
+        result.recordsmenu.section[obj.sec_n].entree.push({'item' : obj.item, 'price': obj.price});
+
+        console.log(JSON.stringify(result, null, " "));
+
+        jsToXmlFile('AdriansRecords.xml', result, function(err){
+            if(err) console.log(err);
+        });
+    });
+};
+
+appendJSON(req.body)
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
     var addr = server.address();
     console.log("Server listnening at", addr.address + ":" + addr.port);
