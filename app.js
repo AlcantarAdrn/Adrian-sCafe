@@ -53,7 +53,7 @@ router.get('/get/html', function(req,res) {
 
 router.post('/post/json', function (req,res){
 
-    function appendJSON(obj)
+    function appendJSON(obj){
 
     xmlFileToJs('AdriansRecords.xml', function (err, result) {
         if(err) throw (err);
@@ -68,6 +68,36 @@ router.post('/post/json', function (req,res){
 };
 
 appendJSON(req.body)
+res.redirect('back');
+});
+
+router.post('/post/delet', function(req,res){
+
+    function deleteJSON(obj){
+        
+        console.log(obj)
+
+        xmlFileToJs ('AdriansRecords.xml', function (err,result){
+            if(err) throw (err);
+
+            delete result.recordsmenu.section[obj.section].entree[obj.entree];
+
+            console.log(JSON.stringify(result, null, " "));
+
+            jsToXmlFile('AdriansRecords.xml', result, function(err) {
+                if (err) console.log(err);
+
+            });
+        });
+
+    };
+
+    deleteJSON(req.body);
+
+    res.redirect('back');
+})
+
+
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
     var addr = server.address();
     console.log("Server listnening at", addr.address + ":" + addr.port);
