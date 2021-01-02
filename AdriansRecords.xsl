@@ -4,7 +4,7 @@
         <table id="recordsTable" border="1" class="indent">
         <thead>
             <tr>
-                <th colspan="3">Records</th>
+                <th colspan="4">Records</th>
             </tr>
             
             <tr>
@@ -18,7 +18,7 @@
             <tbody>
                 <xsl:for-each select = "/recordsmenu/section">
                 <tr> 
-                    <th colspan = "3">
+                    <th colspan = "4">
                         <xsl:value-of select = "@name"/>
                     </th>
                 </tr>
