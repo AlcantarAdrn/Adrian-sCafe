@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<recordsmenu>
+<recordsmenu> 
   <section name="Pop">
     <entree>
       <artist> Ariana Grande</artist>
@@ -10,14 +10,6 @@
       <artist> Jessie Ware</artist>
       <title> What's your plessure? </title>
       <price>15.49</price>
-    </entree>
-    <entree>
-      <item/>
-      <price/>
-    </entree>
-    <entree>
-      <item/>
-      <price/>
     </entree>
   </section>
   <section name="Folk-pop">
@@ -31,12 +23,9 @@
       <title>Feeding Seahorses by Hand</title>
       <price>13.49</price>
     </entree>
-    <entree>
-      <item/>
-      <price/>
-    </entree>
-  </section>
-  <section name="Alternative">
+</section>
+
+<section name="Alternative">
     <entree>
       <artist> FKA Twigs </artist>
       <title> Magdalene</title>
@@ -51,14 +40,6 @@
       <artist> Grimes </artist>
       <title>Visions</title>
       <price>12.04 </price>
-    </entree>
-    <entree>
-      <item>Arianna Grande</item>
-      <price/>
-    </entree>
-    <entree>
-      <item/>
-      <price/>
     </entree>
   </section>
 </recordsmenu>

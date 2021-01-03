@@ -1,43 +1,23 @@
-function calculateBill(idMenuTable) {
-    var fBillTotal = 0.0;
-    var i = 0;
+//Function that calculates the total of the bill, using the records table as a parameter. 
+function calculateBill(idrecordsTable) {
+    var fBillTotal = 0.0; //variable that holds the bill's total, initialized to zero.
+    var i = 0;//var used inside the for loop.
     var aCBTags = document.querySelectorAll('input');
+
     for (i = 0; i < aCBTags.length; i++) {
-        // is this menu item selected? it is if the checkbox is checked
-        if (aCBTags[i].checked) {
-            // get the checkbox' parent table row
-            var oTR = getParentTag(aCBTags[i], 'TR');
-            // retrieve the price from the price column, which is the third column in the table
-            var oTDPrice = oTR.getElementsByTagName('TD')[2];
-            // the first child text node of the column contains the price
-            fBillTotal += parseFloat(oTDPrice.firstChild.data);
+        // inside the for loop that checks if a box is ticked.
+        if (aCBTags[i].checked) { //if statement body
+            // get the checkbox's parent table row
+            var oTR = getParentTag(aCBTags[i], 'TR'); //variable with the table row and calling of the getParentTag method below.
+             var oTDPrice = oTR.getElementsByTagName('TD')[3];  // obtain the price from the price column, which is the fourth column.
+            fBillTotal += parseFloat(oTDPrice.firstChild.data); //the var billtotal will be equal to the data held in the column
         };
     };
-    // return the price as a decimal number with 2 decimal places
-    return Math.round(fBillTotal * 100.0) / 100.0;
+    return Math.round(fBillTotal * 100.0) / 100.0; //Return the price with two decimal places.
 };
 
-function highlightVegetarian(idTable, bShowVeg) {
-    // if bShowVeg is true, then we're highlighting vegetarian
-    //	meals, otherwise we're unhighlighting them.
-    var i = 0;
-    var oTable = document.getElementById(idTable);
-    var oTBODY = oTable.getElementsByTagName('tbody')[0];
-    var aTRs = oTBODY.getElementsByTagName('tr');
-    // walk through each of the table rows and see if it has a 
-    // "vegetarian" attribute on it.
-    for (i = 0; i < aTRs.length; i++) {
-        if (aTRs[i].getAttribute('vegetarian') == "true") {
-            if (bShowVeg) {
-                aTRs[i].style.backgroundColor = "lightGreen";
-            } else {
-                aTRs[i].style.backgroundColor = "";
-            };
-        };
-    };
-};
-// Utility function for getting the parent tag of a given tag
-// but only of a certain type (i.e. a TR, a TABLE, etc.)
+
+// Function for getting the parent tag of a given tag
 function getParentTag(oNode, sParentType) {
     var oParent = oNode.parentNode;
     while (oParent) {
