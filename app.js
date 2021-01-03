@@ -15,7 +15,7 @@ router.use(express.static(path.resolve(__dirname, 'views'))); //We also need a s
 router.use(express.urlencoded({extended:true}));
 router.use(express.json()); 
 
-function xmlFileToJs(filename, cb){
+function xmlFileToJs(filename, cb){  //Function to go from xml to json 
 var filepath = path.normalize(path.join(__dirname,filename));
 fs.readFile(filepath, 'utf8', function(err,xmlStr) {
     if(err) throw(err);
@@ -24,7 +24,7 @@ fs.readFile(filepath, 'utf8', function(err,xmlStr) {
 });
 }
 
-function jsToXmlFile(filename, obj,cb){
+function jsToXmlFile(filename, obj,cb){ //Function to go from JSON to xml 
     var filepath = path.normalize(path.join(__dirname, filename));
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(obj);
@@ -100,7 +100,7 @@ router.post('/post/delet', function(req,res){
 })
 
 
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
-    var addr = server.address();
-    console.log("Server listnening at", addr.address + ":" + addr.port);
+server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () { //The server has to listen to the port 3000
+    var addr = server.address(); //The address is stored in the var addr 
+    console.log("Server listnening at", addr.address + ":" + addr.port); //And it is send to the console that the port 3000 is listening and shows in browser or preview.
 });
